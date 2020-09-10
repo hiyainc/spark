@@ -1,12 +1,12 @@
-name: branch-2.4
+name: branch-2.4-hiya
 
 on:
   push:
     branches:
-    - branch-2.4
+    - branch-2.4-hiya
   pull_request:
     branches:
-    - branch-2.4
+    - branch-2.4-hiya
 
 jobs:
   build:
