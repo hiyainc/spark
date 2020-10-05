@@ -21,12 +21,12 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.apache.spark</groupId>
-    <artifactId>spark-parent_2.12</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <artifactId>spark-parent_2.11</artifactId>
+    <version>2.4.7</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>spark-hadoop-cloud_2.12</artifactId>
+  <artifactId>spark-hadoop-cloud_2.11</artifactId>
   <packaging>jar</packaging>
   <name>Spark Project Hadoop Cloud Integration</name>
   <description>
@@ -70,7 +70,7 @@
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-aws</artifactId>
       <version>${hadoop.version}</version>
-      <scope>${hadoop.deps.scope}</scope>
+      <scope>provided</scope>
       <exclusions>
         <exclusion>
           <groupId>org.apache.hadoop</groupId>
@@ -106,7 +106,7 @@
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-openstack</artifactId>
       <version>${hadoop.version}</version>
-      <scope>${hadoop.deps.scope}</scope>
+      <scope>provided</scope>
       <exclusions>
         <exclusion>
           <groupId>org.apache.hadoop</groupId>
@@ -134,18 +134,18 @@
     <dependency>
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
-      <scope>${hadoop.deps.scope}</scope>
+      <scope>provided</scope>
     </dependency>
     <!-- explicitly declare the jackson artifacts desired -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <scope>${hadoop.deps.scope}</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
-      <scope>${hadoop.deps.scope}</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -156,19 +156,19 @@
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
-      <scope>${hadoop.deps.scope}</scope>
+      <scope>provided</scope>
     </dependency>
     <!--Explicit declaration to force in Spark version into transitive dependencies -->
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpcore</artifactId>
-      <scope>${hadoop.deps.scope}</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-azure</artifactId>
       <version>${hadoop.version}</version>
-      <scope>${hadoop.deps.scope}</scope>
+      <scope>provided</scope>
       <exclusions>
         <exclusion>
           <groupId>org.apache.hadoop</groupId>
@@ -246,7 +246,7 @@
           <groupId>org.apache.hadoop</groupId>
           <artifactId>hadoop-cloud-storage</artifactId>
           <version>${hadoop.version}</version>
-          <scope>${hadoop.deps.scope}</scope>
+          <scope>provided</scope>
           <exclusions>
             <exclusion>
               <groupId>org.apache.hadoop</groupId>
@@ -276,13 +276,13 @@
         <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-util</artifactId>
-          <scope>${hadoop.deps.scope}</scope>
+          <scope>provided</scope>
         </dependency>
         <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-util-ajax</artifactId>
           <version>${jetty.version}</version>
-          <scope>${hadoop.deps.scope}</scope>
+          <scope>provided</scope>
         </dependency>
       </dependencies>
     </profile>
